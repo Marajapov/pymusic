@@ -1,17 +1,51 @@
 <?php
     include('../config.php');
     include("header.php");
-    $select_radio = getpost('select_radio');
-    $radio_id = $radio_type_row['id'];
-    $radio_type = $db->select('radio');
-    $artist = $db->select("artist");
-    $from = getpost('from');
-    $to = getpost('to');
-    $radio = $db->selectpuresql("SELECT m.artist, m.song,p.date_played , p.time_played, r.name
-    FROM played_melody  p
-    inner join melody m on p.track_id = m.track_id
-    inner join radio r on p.radio_id = r.id
-    where p.time_played >= NOW()- INTERVAL 1 HOUR and p.date_played >= ".$from." and p.date_played <= ".$to." and p.radio_id = ".$select_radio.";");
+
+    if(isset($_POST['search'])){
+        $where = '';
+        $select_radio = getpost('select_radio');
+
+        $singer = getpost('signer');
+        $from = getpost('from');
+        $to = getpost('to');
+
+        $sql ="
+        SELECT  m.artist, m.song,
+                p.date_played, p.time_played,
+                r.name
+        FROM played_melody p
+        INNER JOIN melody m on p.track_id = m.track_id
+        INNER JOIN radio r on p.radio_id = r.id
+        WHERE ";
+
+        $sql = "SELECT m.artist, m.song, p.date_played, p.time_played, r.name FROM played_melody p INNER JOIN";
+
+
+
+
+        if(isset($select_radio)){
+            $where .= "p.radio_id = ".$select_radio;
+        }elseif(isset($from) && isset($to)){
+            $where .= ' AND p.date_played >= '.$from.' and p.date_played <= '.$to;
+        }elseif(isset($singer)){
+            $singers = $db->select_one("artist","id='".$singer."'");
+            $singer_name = $singers['name'];
+            $where .= 'AND m.artist = '.$singer_name;
+        }
+
+        echo $sql = "
+        SELECT  m.artist, m.song,
+                p.date_played, p.time_played,
+                r.name
+        FROM played_melody p
+        INNER JOIN melody m on p.track_id = m.track_id
+        INNER JOIN radio r on p.radio_id = r.id
+        WHERE ".$where;
+
+        $radio = $db->selectpuresql($sql);
+
+    }
 
     include('header_menu.php');
 ?>
@@ -55,12 +89,9 @@
                         <div class="form-group col-md-12">
                             <div class="col-md-6 no-padding">
                                 <select required="required" class="form-control" name="select_radio">
+                                    <option value="0"> ... Выберите ... </option>
                                     <?php
-                                    if($select_radio){
-                                        $selected_radio = $db->select_one("radio","id='".$select_radio."'");
-                                        echo '<option value="'.$selected_radio['id'].'">'.$selected_radio['name'].'</option>';
-                                    }else{ echo '<option value="0"> . . . . . </option>'; }
-
+                                    $radio_type = $db->select('radio');
                                     foreach($radio_type as $radio_type_row){
                                         echo '<option value="'.$radio_type_row['id'].'">'.$radio_type_row['name'].'</option>';
                                     }
@@ -229,9 +260,10 @@
                         <div class="form-group col-md-12">
                             <div class="col-md-6 no-padding">
                                 <div class="ui-widget">
-                                    <select id="combobox">
+                                    <select id="combobox" name="signer">
                                         <option value="">Select one...</option>
                                         <?php
+                                        $artist = $db->select("artist");
                                         foreach($artist as $art){
                                         ?>
                                         <option value="<?php echo $art['id']; ?>"><?php echo $art['name']; ?></option>
@@ -273,6 +305,7 @@
                 <th>Время(часы)</th>
             </thead>
             <tbody>
+
             <?php
             foreach($radio as $key=>$radio_row){
                 $key++;

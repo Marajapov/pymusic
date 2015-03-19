@@ -208,7 +208,7 @@ class db_mysql {
         if(!empty($limit))
             $sql .= " LIMIT " . $limit;
         $sql .= ";";  
-		//echo $sql;
+		echo $sql;
         $query_id = $this->run($sql);
         $out = array();
 
