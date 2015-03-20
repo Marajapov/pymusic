@@ -10,41 +10,55 @@
         $from = getpost('from');
         $to = getpost('to');
 
-        $sql ="
-        SELECT  m.artist, m.song,
-                p.date_played, p.time_played,
-                r.name
-        FROM played_melody p
-        INNER JOIN melody m on p.track_id = m.track_id
-        INNER JOIN radio r on p.radio_id = r.id
-        WHERE ";
+        // If selected radio
+        if(!empty($select_radio)){
+            $where .= "p.radio_id='".$select_radio."'";
+        }
+        // If selected period of date
+        if(!empty($from) && !empty($to)){
+            $from_date = date("Y-m-d",strtotime($from));
+            $to_date = date("Y-m-d",strtotime($to));
+            if(empty($select_radio)){
+                $where .= " p.date_played >='".$from_date."' AND p.date_played <= '".$to_date."'";
+            }else{
+                $where .= " AND p.date_played >='".$from_date."' AND p.date_played <= '".$to_date."'";
+            }
 
-        $sql = "SELECT m.artist, m.song, p.date_played, p.time_played, r.name FROM played_melody p INNER JOIN";
+        }
+        // If selected the singer
+        if(!empty($singer)){
+            $where .= " AND m.artist = '".$singer."'";
+        }
 
-
-
-
-        if(isset($select_radio)){
-            $where .= "p.radio_id = ".$select_radio;
-        }elseif(isset($from) && isset($to)){
-            $where .= ' AND p.date_played >= '.$from.' and p.date_played <= '.$to;
-        }elseif(isset($singer)){
-            $singers = $db->select_one("artist","id='".$singer."'");
-            $singer_name = $singers['name'];
-            $where .= 'AND m.artist = '.$singer_name;
+        // For btn " today "
+        if(isset($_POST['btn_today']) && empty($from) && empty($to)){
+            $where .= " p.date_played >= NOW()- INTERVAL 1 DAY";
         }
 
         echo $sql = "
-        SELECT  m.artist, m.song,
-                p.date_played, p.time_played,
-                r.name
-        FROM played_melody p
+        SELECT m.artist, m.song, p.date_played as p_date_played, p.time_played as p_time_played, r.name as r_name, COUNT(m.track_id) as number_track
+        FROM played_melody  p
         INNER JOIN melody m on p.track_id = m.track_id
         INNER JOIN radio r on p.radio_id = r.id
-        WHERE ".$where;
+        WHERE
+        ".$where."
+        GROUP BY m.track_id
+        ORDER BY number_track DESC";
+
 
         $radio = $db->selectpuresql($sql);
 
+    }else{
+        $sql = "
+        SELECT m.artist, m.song, p.date_played as p_date_played, p.time_played as p_time_played, r.name as r_name, COUNT(m.track_id) as number_track
+        FROM played_melody  p
+        INNER JOIN melody m on p.track_id = m.track_id
+        INNER JOIN radio r on p.radio_id = r.id
+        WHERE p.date_played >= NOW()- INTERVAL 1 DAY
+        GROUP BY m.track_id
+        ORDER BY number_track DESC";
+
+        $radio = $db->selectpuresql($sql);
     }
 
     include('header_menu.php');
@@ -266,7 +280,7 @@
                                         $artist = $db->select("artist");
                                         foreach($artist as $art){
                                         ?>
-                                        <option value="<?php echo $art['id']; ?>"><?php echo $art['name']; ?></option>
+                                        <option value="<?php echo $art['name']; ?>"><?php echo $art['name']; ?></option>
                                         <?php
                                         }
                                         ?>
@@ -279,7 +293,7 @@
                         </div>
 
                         <div class="form-group col-md-12">
-                            <input class="btn btn-default" type="button" name="button" value="Today"/>
+                            <input class="btn btn-default" type="submit" name="btn_today" value="Today"/>
                             <input class="btn btn-primary" type="button" name="button" value="3"/>
                             <input class="btn btn-success" type="button" name="button" value="week"/>
                             <input class="btn btn-warning" type="button" name="button" value="14"/>
@@ -302,7 +316,9 @@
                 <th>Певец</th>
                 <th>Песня</th>
                 <th>Кол-во воспроизведений</th>
-                <th>Время(часы)</th>
+                <th>Дата воспроизведений</th>
+                <th>Время воспроизведений</th>
+                <th>Радио</th>
             </thead>
             <tbody>
 
@@ -314,8 +330,10 @@
                     <td><?php echo $key; ?></td>
                     <td><a href="#" data-toggle="modal" data-target="#myModal<?=$key;?>"><?php echo $radio_row['artist']; ?></a></td>
                     <td><?php echo $radio_row['song']; ?></td>
-                    <td><?php echo $radio_row['song']; ?></td>
-                    <td><?php echo $radio_row['time_played']; ?></td>
+                    <td><?php echo $radio_row['number_track']; ?></td>
+                    <td><?php echo $radio_row['p_date_played']; ?></td>
+                    <td><?php echo $radio_row['p_time_played']; ?></td>
+                    <td><?php echo $radio_row['r_name']; ?></td>
 
                 </tr>
                 <div class="modal fade" id="myModal<?=$key;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -337,6 +355,29 @@
                 </div>
             <?php
             }
+
+            /*
+             *   if(isset($select_radio)){
+            $where .= "p.radio_id = ".$select_radio;
+        }elseif(isset($from) && isset($to)){
+            $where .= 'AND p.date_played >= '.$from.' and p.date_played <= '.$to;
+        }
+        elseif(isset($singer)){
+            $singers = $db->select_one("artist","id='".$singer."'");
+            $singer_name = $singers['name'];
+            $where .= 'AND m.artist = '.$singer_name;
+        }
+
+        echo $sql = "
+        SELECT  m.artist, m.song,
+                p.date_played, p.time_played,
+                r.name, COUNT(m.song) as c_song
+        FROM played_melody p
+        INNER JOIN melody m on p.track_id = m.track_id
+        INNER JOIN radio r on p.radio_id = r.id
+        WHERE ".$where."
+        ORDER BY p.date_played DESC"
+             * */
             ?>
             </tbody>
         </table>
