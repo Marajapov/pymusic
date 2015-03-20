@@ -2,7 +2,7 @@
     include('../config.php');
     include("header.php");
 
-    if(isset($_POST['search'])){
+    if(isset($_POST['search']) || isset($_POST['btn_today'])){
         $where = '';
         $select_radio = getpost('select_radio');
 
@@ -26,13 +26,27 @@
 
         }
         // If selected the singer
-        if(!empty($singer)){
-            $where .= " AND m.artist = '".$singer."'";
+        if(!empty($singer) && $_POST['search']){
+            if(empty($select_radio) || empty($from) || empty($to)){
+                $where .= " m.artist = '".$singer."'";
+            }else{
+                $where .= " AND m.artist = '".$singer."'";
+            }
+
         }
 
         // For btn " today "
-        if(isset($_POST['btn_today']) && empty($from) && empty($to)){
-            $where .= " p.date_played >= NOW()- INTERVAL 1 DAY";
+        if(empty($from) && empty($to)){
+
+            if(!empty($singer)){
+                $where .= " m.artist = '".$singer."'";
+                $where .= " AND p.date_played >= NOW()- INTERVAL 1 DAY";
+            }elseif(!empty($select_radio)){
+                $where .= " AND p.date_played >= NOW()- INTERVAL 1 DAY";
+            }else{
+                $where .= " p.date_played >= NOW()- INTERVAL 1 DAY";
+            }
+
         }
 
         echo $sql = "
@@ -43,7 +57,7 @@
         WHERE
         ".$where."
         GROUP BY m.track_id
-        ORDER BY number_track DESC";
+        ORDER BY number_track DESC, p.date_played";
 
 
         $radio = $db->selectpuresql($sql);
@@ -59,6 +73,7 @@
         ORDER BY number_track DESC";
 
         $radio = $db->selectpuresql($sql);
+        $type = 1;
     }
 
     include('header_menu.php');
@@ -316,7 +331,11 @@
                 <th>Певец</th>
                 <th>Песня</th>
                 <th>Кол-во воспроизведений</th>
-                <th>Дата воспроизведений</th>
+                <?php if($type == 1){
+                }else{
+                echo '<th>Дата воспроизведений</th>';
+                }?>
+
                 <th>Время воспроизведений</th>
                 <th>Радио</th>
             </thead>
@@ -331,7 +350,12 @@
                     <td><a href="#" data-toggle="modal" data-target="#myModal<?=$key;?>"><?php echo $radio_row['artist']; ?></a></td>
                     <td><?php echo $radio_row['song']; ?></td>
                     <td><?php echo $radio_row['number_track']; ?></td>
-                    <td><?php echo $radio_row['p_date_played']; ?></td>
+            <?php if($type == 1){
+
+                    }else{
+                        echo "<td>".$radio_row['p_date_played']."</td>";
+                    } ?>
+
                     <td><?php echo $radio_row['p_time_played']; ?></td>
                     <td><?php echo $radio_row['r_name']; ?></td>
 

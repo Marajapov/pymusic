@@ -58,7 +58,7 @@
     <file path="/submit.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426238380164" ignored="false" />
     <file path="/cssmenu.css" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426245181392" ignored="false" />
     <file path="/bootstrap.css" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426350277930" ignored="false" />
-    <file path="/showStatisticsAboutRadio.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426836861014" ignored="false" />
+    <file path="/showStatisticsAboutRadio.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426838530473" ignored="false" />
     <file path="/jquery-ui.min.css" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426762350811" ignored="false" />
     <file path="$PROJECT_DIR$/../../radio.jp/www/admin/showStatisticsAboutRadio.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426772471754" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,21 +83,21 @@
       <file leaf-file-name="showStatisticsAboutRadio.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/showStatisticsAboutRadio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="28" selection-start="296" selection-end="296" vertical-scroll-proportion="0.123039804">
+            <state line="44" column="29" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.020506635">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="tag#script#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <marker date="1426837074681" expanded="true" signature="3251:4113" placeholder="..." />
-                <marker date="1426837074681" expanded="true" signature="3317:4113" placeholder="..." />
-                <marker date="1426837074681" expanded="true" signature="3364:4113" placeholder="..." />
-                <marker date="1426837074681" expanded="true" signature="3410:4113" placeholder="..." />
-                <marker date="1426837074681" expanded="true" signature="3588:4113" placeholder="..." />
-                <marker date="1426837074681" expanded="true" signature="3703:4113" placeholder="..." />
-                <marker date="1426837074681" expanded="true" signature="3762:4113" placeholder="..." />
-                <marker date="1426837074681" expanded="true" signature="3824:4113" placeholder="..." />
-                <marker date="1426837074681" expanded="true" signature="3926:4113" placeholder="..." />
-                <marker date="1426837074681" expanded="true" signature="5314:12036" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="3783:4645" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="3849:4645" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="3896:4645" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="3942:4645" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="4120:4645" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="4235:4645" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="4294:4645" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="4356:4645" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="4458:4645" placeholder="..." />
+                <marker date="1426839081246" expanded="true" signature="5846:12568" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -429,7 +429,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="1" width="1918" height="1038" extended-state="1" />
+    <frame x="2" y="1" width="1918" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -597,21 +597,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/showStatisticsAboutRadio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="296" selection-end="296" vertical-scroll-proportion="0.123039804">
+        <state line="44" column="29" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.020506635">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="tag#script#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <marker date="1426837074681" expanded="true" signature="3251:4113" placeholder="..." />
-            <marker date="1426837074681" expanded="true" signature="3317:4113" placeholder="..." />
-            <marker date="1426837074681" expanded="true" signature="3364:4113" placeholder="..." />
-            <marker date="1426837074681" expanded="true" signature="3410:4113" placeholder="..." />
-            <marker date="1426837074681" expanded="true" signature="3588:4113" placeholder="..." />
-            <marker date="1426837074681" expanded="true" signature="3703:4113" placeholder="..." />
-            <marker date="1426837074681" expanded="true" signature="3762:4113" placeholder="..." />
-            <marker date="1426837074681" expanded="true" signature="3824:4113" placeholder="..." />
-            <marker date="1426837074681" expanded="true" signature="3926:4113" placeholder="..." />
-            <marker date="1426837074681" expanded="true" signature="5314:12036" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="3783:4645" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="3849:4645" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="3896:4645" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="3942:4645" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="4120:4645" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="4235:4645" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="4294:4645" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="4356:4645" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="4458:4645" placeholder="..." />
+            <marker date="1426839081246" expanded="true" signature="5846:12568" placeholder="..." />
           </folding>
         </state>
       </provider>
