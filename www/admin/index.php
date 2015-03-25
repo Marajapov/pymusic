@@ -56,7 +56,7 @@
         INNER JOIN radio r ON pm.radio_id = r.id
         where ".$timeSql.$radioSql."");
 
-     $singer_radio = $db->selectpuresql("select r.id as radio_id, r.name as radio, a.name as artist, a.id as artist_id, count(*) as total
+    $singer_radio = $db->selectpuresql("select r.id as radio_id, r.name as radio, a.name as artist, a.id as artist_id, count(*) as total
         from played_melody pm
         INNER JOIN radio r ON pm.radio_id = r.id
         INNER JOIN melody m ON m.track_id = pm.track_id
@@ -307,7 +307,7 @@ foreach($popular_singer as $key=>$singer_row){
                                                                                                 </h4>
                                                                                             </div>
 
-                                                                                            <div id="collapse<?=$radioReport->radio_id;?>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<?=$radioReport->radio_id;?>">
+                                                                                            <div id="collapse<?=$radioReport->radio_id;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?=$radioReport->radio_id;?>">
                                                                                                 <div class="panel-body">
                                                                                                     <ul class="list-group">
                                                                                                         <?php
@@ -380,6 +380,7 @@ foreach($popular_singer as $key=>$singer_row){
                                             <div class="panel-heading clearfix">
                                                 <h4 class="col-lg-1">№</h4>
                                                 <h4 class="col-lg-11">Песня</h4>
+                                                <h4 class="col-lg-11">Певец</h4>
                                             </div>
                                             <?php
                                             foreach($popular_songs as $unique=>$song_row){
