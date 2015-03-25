@@ -4,7 +4,7 @@
 
     $radioSql = " and 1 ";
 
-    $timeSql = "  1 "; // pm.date_played >= CURDATE() ";
+    $timeSql = " pm.date_played >= CURDATE() ";
 
 
     $where = '';
@@ -262,7 +262,6 @@ foreach($popular_singer as $key=>$singer_row){
 
                                         foreach($report_full as $key=>$singer){
                                             $key++;
-                                            if ($key!=137) continue;
 
                                             ?>
                                             <!-- .panel-heading -->
