@@ -1,8 +1,9 @@
 <?php
+
 error_reporting(E_ALL & ~(E_STRICT|E_NOTICE));
-ini_set('display_errors', '0');
+//ini_set('display_errors', '0');
 //error_reporting(E_ALL);
-//ini_set("display_errors", 1);
+ini_set("display_errors", 1);
 
 header('Content-type: text/html; charset=UTF-8');
 
@@ -37,5 +38,9 @@ $db->connect();
 //mysql_query("SET CHARACTER SET utf8");
 
 
+
+// user_type = 1 => admin
+// user_type = 2 => manager
+// user_type = 3 => singer
 
 ?>

@@ -5,15 +5,15 @@
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/app.blade.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425465948795" ignored="false" />
-    <file path="/index.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426531540826" ignored="false" />
-    <file path="/login.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426513034640" ignored="false" />
+    <file path="/index.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427282623871" ignored="false" />
+    <file path="/login.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427102844277" ignored="false" />
     <file path="/addUser.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426513591388" ignored="false" />
-    <file path="/usercontrol.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426531163580" ignored="false" />
-    <file path="/logout.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425467033225" ignored="false" />
+    <file path="/usercontrol.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427094903650" ignored="false" />
+    <file path="/logout.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427102572150" ignored="false" />
     <file path="/admin.blade.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426246925413" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426073023987" ignored="false" />
     <file path="/showUser.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426511849795" ignored="false" />
-    <file path="/style.css" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426247117393" ignored="false" />
+    <file path="/style.css" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427199347604" ignored="false" />
     <file path="$PROJECT_DIR$/../../Charts for aparts/index.html" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425554409130" ignored="false" />
     <file path="/index.html" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425827950564" ignored="false" />
     <file path="$PROJECT_DIR$/../../Charts for aparts/index.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425554501410" ignored="false" />
@@ -31,7 +31,7 @@
     <file path="/addSinger.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425798987056" ignored="false" />
     <file path="/chooseSinger.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426074153783" ignored="false" />
     <file path="/datepicker3.css" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425756808174" ignored="false" />
-    <file path="/dummy.xml" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425798235826" ignored="false" />
+    <file path="/dummy.xml" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427122396133" ignored="false" />
     <file path="/a.dummy" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426045208560" ignored="false" />
     <file path="/showSinger.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425830162434" ignored="false" />
     <file path="/bootstrap-datepicker.js" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1425823266109" ignored="false" />
@@ -58,9 +58,20 @@
     <file path="/submit.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426238380164" ignored="false" />
     <file path="/cssmenu.css" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426245181392" ignored="false" />
     <file path="/bootstrap.css" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426350277930" ignored="false" />
-    <file path="/showStatisticsAboutRadio.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426838530473" ignored="false" />
+    <file path="/showStatisticsAboutRadio.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427092079243" ignored="false" />
     <file path="/jquery-ui.min.css" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426762350811" ignored="false" />
     <file path="$PROJECT_DIR$/../../radio.jp/www/admin/showStatisticsAboutRadio.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1426772471754" ignored="false" />
+    <file path="/nav.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427108274417" ignored="false" />
+    <file path="/user_control.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427102412593" ignored="false" />
+    <file path="/user_list.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427105314361" ignored="false" />
+    <file path="/header.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427109759340" ignored="false" />
+    <file path="/user_edit.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427107150104" ignored="false" />
+    <file path="/user_add.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427107567739" ignored="false" />
+    <file path="/user_delete.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427107342653" ignored="false" />
+    <file path="/footer.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427112500057" ignored="false" />
+    <file path="$PROJECT_DIR$/../../aibek.jp/www/config.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427110990790" ignored="false" />
+    <file path="/report_class.php" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427266191821" ignored="false" />
+    <file path="C:/xampp/htdocs/midpoint.pro/.idea/workspace.xml" changelist="40edbbd1-460f-4ef5-b5b9-7924d95f2e62" time="1427270272687" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,60 +91,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="showStatisticsAboutRadio.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/showStatisticsAboutRadio.php">
+      <file leaf-file-name="nav.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/nav.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="29" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.020506635">
+            <state line="54" column="53" selection-start="2590" selection-end="2590" vertical-scroll-proportion="-0.65384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="254" column="76" selection-start="11433" selection-end="11433" vertical-scroll-proportion="3.2694685">
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="tag#script#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <marker date="1426839081246" expanded="true" signature="3783:4645" placeholder="..." />
-                <marker date="1426839081246" expanded="true" signature="3849:4645" placeholder="..." />
-                <marker date="1426839081246" expanded="true" signature="3896:4645" placeholder="..." />
-                <marker date="1426839081246" expanded="true" signature="3942:4645" placeholder="..." />
-                <marker date="1426839081246" expanded="true" signature="4120:4645" placeholder="..." />
-                <marker date="1426839081246" expanded="true" signature="4235:4645" placeholder="..." />
-                <marker date="1426839081246" expanded="true" signature="4294:4645" placeholder="..." />
-                <marker date="1426839081246" expanded="true" signature="4356:4645" placeholder="..." />
-                <marker date="1426839081246" expanded="true" signature="4458:4645" placeholder="..." />
-                <marker date="1426839081246" expanded="true" signature="5846:12568" placeholder="..." />
+                <element signature="tag#form#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+                <element signature="e#19240#19260#0" expanded="true" />
+                <marker date="1427282661739" expanded="true" signature="19260:19618" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="19345:19618" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="19433:19618" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="19722:19804" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="21084:21705" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="21140:21705" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="21215:21705" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="21901:22515" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="21995:22515" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="22094:22515" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="22192:22515" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="22340:22515" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="22999:23650" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="23094:23650" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="23194:23650" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="23297:23650" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="23849:24496" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="23953:24496" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="24381:24496" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="26005:26391" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="26094:26391" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="26186:26391" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="26944:27051" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="27823:28435" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="27943:28435" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="28066:28435" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="28675:29259" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="28799:29259" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="29149:29259" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="31212:31214" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="31875:32487" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="31995:32487" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="32118:32487" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="32725:33309" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="32849:33309" placeholder="..." />
+                <marker date="1427282661739" expanded="true" signature="33199:33309" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysql.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/mysql.class.php">
+      <file leaf-file-name="report_class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/report_class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="8" selection-start="7783" selection-end="7783" vertical-scroll-proportion="0.0">
+            <state line="39" column="14" selection-start="499" selection-end="499" vertical-scroll-proportion="-25.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery-ui.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/bootstrap-3.3.2-dist/js/ui/1.11.4/jquery-ui.js">
+      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16613" column="0" selection-start="646208" selection-end="646208" vertical-scroll-proportion="0.0">
+            <state line="15" column="8" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showUser.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/showUser.php">
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="63" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
+            <state line="42" column="0" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1427109945257" expanded="true" signature="1778:1802" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="195" column="31" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/login.php">
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="17" column="32" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,31 +205,31 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/admin/addSinger.php" />
-        <option value="$PROJECT_DIR$/admin/addSong.php" />
-        <option value="$PROJECT_DIR$/admin/addUser.php" />
-        <option value="$PROJECT_DIR$/admin/chooseSinger.php" />
-        <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/admin/logout.php" />
-        <option value="$PROJECT_DIR$/admin/showSinger.php" />
-        <option value="$PROJECT_DIR$/admin/showSong.php" />
-        <option value="$PROJECT_DIR$/admin/showUser.php" />
-        <option value="$PROJECT_DIR$/admin/admin.blade.php" />
-        <option value="$PROJECT_DIR$/css/bootstrap-3.3.2-dist/js/ui/1.11.4/jquery-ui.js" />
-        <option value="$PROJECT_DIR$/css/bootstrap-3.3.2-dist/js/ui/1.11.4/jquery-ui.css.js" />
-        <option value="$PROJECT_DIR$/css/bootstrap-3.3.2-dist/js/ui/1.11.4/jquery-ui.css" />
-        <option value="$PROJECT_DIR$/css/bootstrap-3.3.2-dist/css/jquery-ui.min.css" />
-        <option value="$PROJECT_DIR$/class/mysql.class.php" />
-        <option value="$PROJECT_DIR$/admin/showStatisticsAboutRadio.php" />
+        <option value="$PROJECT_DIR$/admin/user_control.php" />
+        <option value="$PROJECT_DIR$/admin/login.php" />
+        <option value="$PROJECT_DIR$/admin/user_list.php" />
+        <option value="$PROJECT_DIR$/admin/user_edit.php" />
+        <option value="$PROJECT_DIR$/admin/user_delete.php" />
+        <option value="$PROJECT_DIR$/admin/user_add.php" />
+        <option value="$PROJECT_DIR$/admin/nav.php" />
+        <option value="$PROJECT_DIR$/admin1/showStatisticsAboutRadio.php" />
+        <option value="$PROJECT_DIR$/admin/header.php" />
+        <option value="$PROJECT_DIR$/admin/footer.php" />
+        <option value="$PROJECT_DIR$/admin/test.php" />
+        <option value="$PROJECT_DIR$/admin/css/style.css" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/admin/report_class.php" />
+        <option value="$PROJECT_DIR$/admin/index.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
-    <option name="y" value="1" />
-    <option name="width" value="1918" />
-    <option name="height" value="1038" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -229,73 +285,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-3.3.2-dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-3.3.2-dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1.11.4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,20 +326,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="class" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,11 +360,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\WebServers\home\pymusic\www\admin" />
       <recent name="D:\Webservers\home\radio.jp\www\stat" />
       <recent name="D:\Webservers\home\radio.jp\www\css\bootstrap-3.3.2-dist\js" />
       <recent name="D:\Webservers\home\radio.jp\www\css" />
       <recent name="D:\Webservers\home\radio.jp\www\admin" />
-      <recent name="D:\Webservers\home\radio.jp\www\css\bootstrap-3.3.2-dist\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Webservers\home\radio.jp\www\css\bootstrap-3.3.2-dist\js" />
@@ -429,14 +405,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="1" width="1918" height="1038" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19234914" sideWeight="0.6713533" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15741728" sideWeight="0.6713533" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -512,106 +488,153 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/ajaxsubmit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="275" selection-end="284" vertical-scroll-proportion="10.153846" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="-7.1923075" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/showSinger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="-5.8846154" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/showSong.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="-5.230769" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/usercontrol.php">
+    <entry file="file://$PROJECT_DIR$/admin/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/user_tie_manager.php">
+    <entry file="file://$PROJECT_DIR$/admin/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="32" selection-start="1540" selection-end="1605" vertical-scroll-proportion="1.5948104" />
+        <state line="42" column="0" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1427109945257" expanded="true" signature="1778:1802" placeholder="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/chooseSinger.php">
+    <entry file="file://$PROJECT_DIR$/admin/bower_components/datatables/media/js/jquery.dataTables.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.34953272" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap-3.3.2-dist/js/jquery-latest.min.js">
+    <entry file="file://$PROJECT_DIR$/admin/bower_components/datatables/media/js/jquery.dataTables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="12767" selection-start="77007" selection-end="77007" vertical-scroll-proportion="0.09751434" />
+        <state line="10549" column="20" selection-start="303714" selection-end="303714" vertical-scroll-proportion="0.33255813">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/login.php">
+    <entry file="file://$PROJECT_DIR$/admin/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="8" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="195" column="31" selection-start="3266" selection-end="3266" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/user_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="78" selection-start="3441" selection-end="3450" vertical-scroll-proportion="-40.53846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/user_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="18" selection-start="397" selection-end="397" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/available_flights_class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="469" selection-end="1086" vertical-scroll-proportion="-16.346153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/user_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="39" selection-start="338" selection-end="338" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="53" selection-start="2590" selection-end="2590" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="32" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index_old_yesterday.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/showUser.php">
+    <entry file="file://$PROJECT_DIR$/admin/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="63" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
+        <state line="39" column="6" selection-start="1690" selection-end="1690" vertical-scroll-proportion="0.7827627">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap-3.3.2-dist/js/ui/1.11.4/jquery-ui.js">
+    <entry file="file://$PROJECT_DIR$/admin/report_class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16613" column="0" selection-start="646208" selection-end="646208" vertical-scroll-proportion="0.0">
+        <state line="39" column="14" selection-start="499" selection-end="499" vertical-scroll-proportion="-25.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap-3.3.2-dist/css/jquery-ui.min.css">
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="15357" selection-start="17088" selection-end="17088" vertical-scroll-proportion="0.19502868" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap-3.3.2-dist/js/ui/1.11.4/jquery-ui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="16" selection-start="4305" selection-end="4305" vertical-scroll-proportion="0.062043797" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/mysql.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="8" selection-start="7783" selection-end="7783" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/showStatisticsAboutRadio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="29" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.020506635">
+        <state line="254" column="76" selection-start="11433" selection-end="11433" vertical-scroll-proportion="3.2694685">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="tag#script#0;tag#form#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-            <marker date="1426839081246" expanded="true" signature="3783:4645" placeholder="..." />
-            <marker date="1426839081246" expanded="true" signature="3849:4645" placeholder="..." />
-            <marker date="1426839081246" expanded="true" signature="3896:4645" placeholder="..." />
-            <marker date="1426839081246" expanded="true" signature="3942:4645" placeholder="..." />
-            <marker date="1426839081246" expanded="true" signature="4120:4645" placeholder="..." />
-            <marker date="1426839081246" expanded="true" signature="4235:4645" placeholder="..." />
-            <marker date="1426839081246" expanded="true" signature="4294:4645" placeholder="..." />
-            <marker date="1426839081246" expanded="true" signature="4356:4645" placeholder="..." />
-            <marker date="1426839081246" expanded="true" signature="4458:4645" placeholder="..." />
-            <marker date="1426839081246" expanded="true" signature="5846:12568" placeholder="..." />
+            <element signature="tag#form#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0" expanded="false" />
+            <element signature="e#19240#19260#0" expanded="true" />
+            <marker date="1427282661739" expanded="true" signature="19260:19618" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="19345:19618" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="19433:19618" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="19722:19804" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="21084:21705" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="21140:21705" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="21215:21705" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="21901:22515" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="21995:22515" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="22094:22515" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="22192:22515" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="22340:22515" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="22999:23650" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="23094:23650" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="23194:23650" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="23297:23650" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="23849:24496" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="23953:24496" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="24381:24496" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="26005:26391" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="26094:26391" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="26186:26391" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="26944:27051" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="27823:28435" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="27943:28435" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="28066:28435" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="28675:29259" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="28799:29259" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="29149:29259" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="31212:31214" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="31875:32487" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="31995:32487" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="32118:32487" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="32725:33309" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="32849:33309" placeholder="..." />
+            <marker date="1427282661739" expanded="true" signature="33199:33309" placeholder="..." />
           </folding>
         </state>
       </provider>
