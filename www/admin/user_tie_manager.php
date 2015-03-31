@@ -1,6 +1,6 @@
 <?php
 
-$user_id = $row['id'];
+$user_id = $item['id'];
 $my_pure_sql = "SELECT s.name as singer_name, t.from_date, t.to_date, t.is_always FROM  user_tie  `t`
 INNER JOIN  artist  `s` ON t.singer_id = s.id where t.user_id = '".$user_id."'";
 $user_tie = $db->selectpuresql($my_pure_sql);
@@ -145,7 +145,7 @@ $user_tie = $db->selectpuresql($my_pure_sql);
 
 // Returns successful data submission message when the entered information is stored in database.
             var dataString = 'user='+ user + '&singer='+ singer + '&from='+ from + '&to='+ to + '&lifetime_flag='+ lifetime_flag;
-            if(singer==0||from==''||to=='')
+            if(singer==0)
             {
                 alert("Please Fill All Fields");
             }

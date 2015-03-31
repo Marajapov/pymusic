@@ -212,8 +212,7 @@
     var three = Date.today().addDays(-3).toString("yyyy/MM/dd");
     var week = Date.today().addWeeks(-1).toString("yyyy/MM/dd");
     var month = Date.today().addMonths(-1).toString("yyyy/MM/dd");
-    var tab_1 = 1;
-    var tab_2 = 2;
+
 
     function today_button_clicked(){
         $('#from').val(today);
@@ -242,10 +241,10 @@
         $("form").submit();
     }
     function tab1_clicked(){
-        $('#last_tab1').val(tab_1);
+        $('#last_tab').val(1);
     }
     function tab2_clicked(){
-        $('#last_tab2').val(tab_2);
+        $('#last_tab').val(2);
     }
 
 

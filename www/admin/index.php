@@ -2,15 +2,14 @@
     include("user_control.php");
     include('header.php');
 
-    // tab
-    define("last_tab",1);
-    if(isset($_POST['last_tab1'])){
-        //runkit_constant_redefine("last_tab",1);
-    }elseif(isset($_POST['last_tab2'])){
-        //runkit_constant_redefine("last_tab",2);
+    // last tab
+    if(!empty($_POST['last_tab'])){
+        $_SESSION['last_tab'] = $_POST['last_tab'];
     }
-    echo last_tab;
 
+    if(!empty($_POST['last_tab'])){
+        $_SESSION['last_tab'] = $_POST['last_tab'];
+    }
 
     $where = '';
 
@@ -214,8 +213,7 @@
                                     <input class="btn btn-danger" type="submit" value="Поиск" name="search">
                                 </div>
 
-                                <input type="hidden" id="last_tab1" name="last_tab1"/>
-                                <input type="hidden" id="last_tab2" name="last_tab2"/>
+                                <input type="hidden" id="last_tab" name="last_tab"/>
                             </form>
 
 
@@ -258,6 +256,7 @@
                                 <tr style="cursor: default;">
 
                                     <th><?php
+                                        echo $_SESSION['last_tab'];
                                         if(!empty($select_radio)){
                                             $radio_name = $db->select_one("radio","id='".$select_radio."'");
                                             echo $radio_name['name'];}else{echo "Все радио";}?>
@@ -288,17 +287,17 @@
 
 
                             <ul class="nav nav-tabs">
-                                <li class="col-md-6 no-padding <?php if(last_tab == 1)echo 'active';?>" onclick="tab1_clicked()">
-                                    <a class="text-right" href="#home" data-toggle="tab" aria-expanded="<?php if(last_tab == 1){echo 'true';}else{echo 'false';}?>">По исполнителям</a>
+                                <li class="col-md-6 no-padding <?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 1))echo 'active';?>" onclick="tab1_clicked()">
+                                    <a class="text-right" href="#home" data-toggle="tab" aria-expanded="<?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 1)){echo 'true';}else{echo 'false';}?>">По исполнителям</a>
                                 </li>
-                                <li class=" col-md-6 no-padding <?php if(last_tab == 2)echo 'active';?>" id="tab2" onclick="tab2_clicked()">
-                                    <a href="#profile" data-toggle="tab" aria-expanded="<?php if(last_tab == 2){echo 'true';}else{echo 'false';}?>"> По названиям песен</a>
+                                <li class=" col-md-6 no-padding <?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 2))echo 'active';?>" id="tab2" onclick="tab2_clicked()">
+                                    <a href="#profile" data-toggle="tab" aria-expanded="<?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 2)){echo 'true';}else{echo 'false';}?>"> По названиям песен</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div class="tab-pane fade <?php if(last_tab == 1){echo 'in active';}else{echo '';}?>" id="home">
+                                <div class="tab-pane fade <?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 1)){echo 'in active';}else{echo '';}?>" id="home">
                                     <div class="table panel p-second">
                                         <div class="panel-heading clearfix">
                                             <h4 class="col-lg-1">№</h4>
@@ -344,7 +343,7 @@
 
                                     </div>
                                 </div>
-                                <div class="tab-pane fade <?php if(last_tab == 2){echo 'in active';}else{echo '';}?>" id="profile">
+                                <div class="tab-pane fade <?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 2)){echo 'in active';}else{echo '';}?>" id="profile">
                                     <div class="table">
                                         <div class="table panel p-second">
                                             <div class="panel-heading clearfix">
