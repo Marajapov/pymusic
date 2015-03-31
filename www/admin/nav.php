@@ -64,18 +64,6 @@
                         </li>
 
                         <li>
-                            <a href="index.html">Новости <span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="news.php">Список новостей</a>
-                                </li>
-                                <li>
-                                    <a href="add_news.php">Добавить новость</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
                             <a href="index.html">Тендеры <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>

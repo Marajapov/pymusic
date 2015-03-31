@@ -32,24 +32,28 @@ $user_tie = $db->selectpuresql($my_pure_sql);
     });
 </script>
 
-<div id="mainform<?php echo $user_id; ?>">
+<div id="mainform<?php echo $user_id; ?>" style="background: #cccccc;">
 
     <div id="form<?php echo $user_id; ?>">
-        <table class="table table-hover tex" style="width: 50%; float: left; margin: 25px 25px">
+        <table class="table table-hover tex" style="width: 50%; float: left; margin: 25px 25px; color:black;">
             <thead class="text-capitalize">
-            <th>Singer</th>
-            <th>Choose for user</th>
+            <th>Все исполнители</th>
+            <th>Выберите дату для исполнителя</th>
             </thead>
 
             <tbody class="table">
             <tr>
                 <td class="col-md-3">
-                    <select name="singer" id="singer<?php echo $user_id; ?>" class="form-control" style="border: 0px">
-                        <option value="0"><b>......</b></option>
+
+
+                    <select id="singer<?php echo $user_id; ?>" name="singer" class="form-control">
+                        <option value="">Выберите ...</option>
                         <?php
-                        foreach($singer as $artist){
-                            echo
-                                '<option value="'.$artist['id'].'">'.$artist['name'].'</option>';
+                        $artist = $db->select("artist");
+                        foreach($artist as $art){
+                            ?>
+                            <option value="<?php echo $art['id']; ?>"><?php echo $art['name']; ?></option>
+                        <?php
                         }
                         ?>
                     </select>
@@ -57,14 +61,14 @@ $user_tie = $db->selectpuresql($my_pure_sql);
 
                 <td class="col-md-9">
 
-                    <div class="col-md-12">
+                    <div class="col-md-6">
 
-                        <label for="from" id="fromlabel<?php echo $user_id; ?>">from&nbsp;</label>
+                        <label for="from" id="fromlabel<?php echo $user_id; ?>">С&nbsp;</label>
                         <input type="text" id="from<?php echo $user_id; ?>" class="from" name="from">
-                        <label for="to" id="tolabel<?php echo $user_id; ?>">&nbsp;to&nbsp;</label>
+                        <label for="to" id="tolabel<?php echo $user_id; ?>">&nbsp;По&nbsp;</label>
                         <input type="text" id="to<?php echo $user_id; ?>" class="to" name="to">
-                        <br/><label for="lifetime_flag<?php echo $user_id; ?>">&nbsp;checkbox explanation:&nbsp;</label>
-                        <input style="margin-left: 30px;" type="checkbox" class="lifetime_flag" id="lifetime_flag<?php echo $user_id; ?>" name="lifetime_flag" value="0">
+                        <br/><label for="lifetime_flag<?php echo $user_id; ?>">&nbsp;Постоянно:&nbsp;</label>
+                        <input style="margin-left: 10px;" type="checkbox" class="lifetime_flag" id="lifetime_flag<?php echo $user_id; ?>" name="lifetime_flag" value="0">
 
 
                     </div>
@@ -76,7 +80,7 @@ $user_tie = $db->selectpuresql($my_pure_sql);
         </table>
         <div style="clear: both"></div>
         <div class="col-md-offset-5">
-            <input type="button" id="submit<?php echo $user_id; ?>" class="btn btn-primary" value="Save" style="position: absolute; top: 145px">
+            <input type="button" id="submit<?php echo $user_id; ?>" class="btn btn-primary" value="Сохранить" style="position: absolute; top: 120px; color:white;">
         </div>
     </div>
 </div>
@@ -85,7 +89,7 @@ $user_tie = $db->selectpuresql($my_pure_sql);
 
     <?php
     $result =   '<br><br><br><br>
-            <table class="table table-hover tex" style="width: 50%; float: right; margin: -168px -83px; margin-bottom: 5px;">
+            <table class="table table-hover tex" style="width: 40%; float: right; margin: -216px 33px; margin-bottom: 5px; color: black;">
             <thead class="text-capitalize">
             <th>Singer</th>
             <th>from date</th>
@@ -168,6 +172,13 @@ $user_tie = $db->selectpuresql($my_pure_sql);
                 });
             }
             return false;
+        });
+    });
+
+    $(function() {
+        $( "#signer<?php echo $user_id;?>" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#signer<?php echo $user_id;?>" ).toggle();
         });
     });
 </script>

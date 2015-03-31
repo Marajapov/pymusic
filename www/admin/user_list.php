@@ -1,6 +1,13 @@
 <?php
 include("header.php");
+$singer = $db->select("artist");
 ?>
+    <script src="../css/bootstrap-3.3.2-dist/js/script_for_menu.js"></script>
+    <link rel="stylesheet" href="../css/cssmenu.css">
+
+    <script src="../css/bootstrap-3.3.2-dist/js/script_for_submit.js"></script>
+    <script src="../css/bootstrap-3.3.2-dist/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap-3.3.2-dist/css/jquery-ui.min.css"/>
 
     <!-- Navigation -->
 <?php
@@ -24,13 +31,14 @@ include("nav.php");
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
-                            <table class="table table-striped table-bordered table-hover">
+                            <table class="table table-striped table-bordered table-hover tex">
                                 <thead>
                                 <tr>
                                     <th class="col-lg-2">Логин</th>
                                     <th class="col-lg-2">ФИО</th>
                                     <th class="col-lg-2">Email</th>
                                     <th class="col-lg-2">Телефон</th>
+                                    <th class="col-lg-2">Manage tie</th>
                                     <th class="col-lg-2">Действия</th>
                                 </tr>
                                 </thead>
@@ -44,9 +52,25 @@ include("nav.php");
                                     <td><?=$item['full_name'];?></td>
                                     <td><?=$item['email'];?></td>
                                     <td class="text-info"><?=$item['phone'];?></td>
+
+                                    <td class="col-md-1">
+                                        <div id='cssmenu'>
+                                            <ul>
+                                                <li class='has-sub'><a href="#">manage tie</a>
+                                                    <ul>
+                                                        <li>
+
+                                                            <?php include('user_tie_manager.php'); ?>
+
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                     <td>
-                                        <a href="user_edit.php?id=<?=$item['id'];?>" class="btn btn-info col-lg-6">Edit</a>
-                                        <a href="user_delete.php?id=<?=$item['id'];?>" class="btn btn-info col-lg-6" onclick="confirm('Вы уверены?')">Delete</a>
+                                        <a href="user_edit.php?id=<?=$item['id'];?>" class="btn btn-info col-lg-5">Изменить</a>
+                                        <a onclick="return confirm('Вы уверены?')" href="user_delete.php?id=<?=$item['id'];?>" class="btn btn-info col-lg-5" >Удалить</a>
                                     </td>
                                 </tr>
                         <?php

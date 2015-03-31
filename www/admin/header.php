@@ -49,6 +49,79 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 
+    <script type="text/javascript">
+        //ajaxListener = {};
+        function ajax_singer(str,from,to,radio)
+        {
+            /*for(artist_id in ajaxListener)
+            {
+                if (artist_id==str) return;
+            }*/
+
+            if (str=="")
+            {
+                document.getElementById("collapse"+str).innerHTML="";
+                return;
+            }
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("collapse"+str).innerHTML=xmlhttp.responseText;
+                    //ajaxListener[str] = true;
+                }
+            }
+
+            xmlhttp.open("GET","ajax_singer.php?str="+str+"&from="+from+"&to="+to+"&radio="+radio,true);
+            xmlhttp.send();
+        }
+
+
+        function ajax_song(mel,from,to,radio)
+        {
+            /*for(artist_id in ajaxListener)
+             {
+             if (artist_id==mel) return;
+             }*/
+
+            if (mel=="")
+            {
+                document.getElementById("collapse"+mel).innerHTML="";
+                return;
+            }
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("collapse"+mel).innerHTML=xmlhttp.responseText;
+                    //ajaxListener[mel] = true;
+                }
+            }
+
+            xmlhttp.open("GET","ajax_song_result.php?mel="+mel+"&from="+from+"&to="+to+"&radio="+radio,true);
+            xmlhttp.send();
+        }
+
+
+    </script>
+
+
 
 </head>
 

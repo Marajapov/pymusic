@@ -21,7 +21,7 @@ $my_pure_sql = "SELECT s.name as singer_name, t.from_date, t.to_date, t.is_alway
 INNER JOIN  artist  `s` ON t.singer_id = s.id where t.user_id = '".$user_id."'";
 $user_tie = $db->selectpuresql($my_pure_sql);
 
-$result =   '<table class="table table-hover tex" style="width: 50%; float: right; margin: -168px -83px; margin-bottom: 5px;">
+$result =   '<table class="table table-hover tex" style="width: 40%; float: right; margin: -216px 33px; margin-bottom: 5px; color: black;">
             <thead class="text-capitalize">
             <th>Singer</th>
             <th>from date</th>

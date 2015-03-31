@@ -44,17 +44,20 @@
 <script>
     $(function() {
         $( "#from" ).datepicker({
-            defaultDate: "+1w",
             changeMonth: true,
             numberOfMonths: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
             onClose: function( selectedDate ) {
                 $( "#to" ).datepicker( "option", "minDate", selectedDate );
             }
+
         });
         $( "#to" ).datepicker({
-            defaultDate: "+1w",
             changeMonth: true,
             numberOfMonths: 1,
+            showOtherMonths: true,
+            selectOtherMonths: true,
             onClose: function( selectedDate ) {
                 $( "#from" ).datepicker( "option", "maxDate", selectedDate );
             }
@@ -199,6 +202,54 @@
             $( "#combobox" ).toggle();
         });
     });
+</script>
+
+
+<script type="text/javascript" src="../css/bootstrap-3.3.2-dist/js/date.js"></script>
+
+<script>
+    var today = Date.today().toString("yyyy/MM/dd");
+    var three = Date.today().addDays(-3).toString("yyyy/MM/dd");
+    var week = Date.today().addWeeks(-1).toString("yyyy/MM/dd");
+    var month = Date.today().addMonths(-1).toString("yyyy/MM/dd");
+    var tab_1 = 1;
+    var tab_2 = 2;
+
+    function today_button_clicked(){
+        $('#from').val(today);
+        $('#to').val(today);
+        $('#btn_1').val(1);
+        $("form").submit();
+
+    }
+    function three_button_clicked(){
+        $('#from').val(three);
+        $('#to').val(today);
+        $('#btn_2').val(2);
+        $("form").submit();
+
+    }
+    function week_button_clicked(){
+        $('#from').val(week);
+        $('#to').val(today);
+        $('#btn_3').val(3);
+        $("form").submit();
+    }
+    function month_button_clicked(){
+        $('#from').val(month);
+        $('#to').val(today);
+        $('#btn_4').val(4);
+        $("form").submit();
+    }
+    function tab1_clicked(){
+        $('#last_tab1').val(tab_1);
+    }
+    function tab2_clicked(){
+        $('#last_tab2').val(tab_2);
+    }
+
+
+
 </script>
 
 

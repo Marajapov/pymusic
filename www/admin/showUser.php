@@ -14,9 +14,7 @@ $singer = $db->select("artist");
 <script src="../css/bootstrap-3.3.2-dist/js/script_for_menu.js"></script>
 <link rel="stylesheet" href="../css/cssmenu.css">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="../css/bootstrap-3.3.2-dist/js/script_for_submit.js"></script>
-<link href="../css/bootstrap-3.3.2-dist/css/bootstrap.css" rel="stylesheet">
 <script src="../css/bootstrap-3.3.2-dist/js/jquery-ui.js"></script>
 <link rel="stylesheet" href="../css/bootstrap-3.3.2-dist/css/jquery-ui.min.css"/>
 
