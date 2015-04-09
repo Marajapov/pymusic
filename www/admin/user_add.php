@@ -43,7 +43,7 @@ include("nav.php");
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Измененить</h1>
+            <h1 class="page-header">Добавить пользователя</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -58,17 +58,17 @@ include("nav.php");
                     </div>
                     <div class="form-group input-group">
                         <span class="input-group-addon">ФИО </span>
-                        <input type="text" class="form-control" name="full_name" required="required">
+                        <input type="text" class="form-control" name="full_name">
                     </div>
 
                     <div class="form-group input-group">
                         <span class="input-group-addon">Email </span>
-                        <input type="email" class="form-control" name="email" required="required">
+                        <input type="email" class="form-control" name="email">
                     </div>
 
                     <div class="form-group input-group">
                         <span class="input-group-addon">Телефон </span>
-                        <input type="text" class="form-control" name="phone" required="required">
+                        <input type="text" class="form-control" name="phone">
                     </div>
 
                     <div class="form-group input-group">
@@ -84,8 +84,9 @@ include("nav.php");
                     <div class="form-group input-group">
                         <span class="input-group-addon">Тип пользователя </span>
                         <select class="form-control" id="sel1" name="user_type">
-                            <option value="2">Менеджер</option>
-                            <option value="3">Певец</option>
+                            <option value="2">Жумушчу-оператор</option>
+                            <option value="3">Клиент-адам</option>
+                            <option value="4">Клиент-ишкана</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-default submit-btn pull-right" name="submit_form">Добавить</button>

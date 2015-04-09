@@ -256,7 +256,6 @@
                                 <tr style="cursor: default;">
 
                                     <th><?php
-                                        echo $_SESSION['last_tab'];
                                         if(!empty($select_radio)){
                                             $radio_name = $db->select_one("radio","id='".$select_radio."'");
                                             echo $radio_name['name'];}else{echo "Все радио";}?>
@@ -290,9 +289,13 @@
                                 <li class="col-md-6 no-padding <?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 1))echo 'active';?>" onclick="tab1_clicked()">
                                     <a class="text-right" href="#home" data-toggle="tab" aria-expanded="<?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 1)){echo 'true';}else{echo 'false';}?>">По исполнителям</a>
                                 </li>
+                                <?php if($_SESSION['user_type'] == 1){?>
                                 <li class=" col-md-6 no-padding <?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 2))echo 'active';?>" id="tab2" onclick="tab2_clicked()">
                                     <a href="#profile" data-toggle="tab" aria-expanded="<?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 2)){echo 'true';}else{echo 'false';}?>"> По названиям песен</a>
                                 </li>
+                            <?php
+                                }
+                                ?>
                             </ul>
 
                             <!-- Tab panes -->
@@ -306,6 +309,7 @@
 
 
                                         <?php
+
                                         foreach($popular_singer as $key=>$singer){
                                             $key++;
                                             ?>
@@ -343,12 +347,14 @@
 
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade <?php if(!empty($_SESSION['last_tab']) && ($_SESSION['last_tab'] == 2)){echo 'in active';}else{echo '';}?>" id="profile">
                                     <div class="table">
                                         <div class="table panel p-second">
                                             <div class="panel-heading clearfix">
                                                 <h4 class="col-lg-1">№</h4>
-                                                <h4 class="col-lg-11">Песня</h4>
+                                                <h4 class="col-md-5">Песня</h4>
+                                                <h4 class="col-md-5">Исполнитель</h4>
                                             </div>
                                             <?php  /////////////////////////////////////////////////////////////////         POPULAR SONGS ////////////////////////////
                                             foreach($popular_songs as $unique=>$song_row){
@@ -365,7 +371,9 @@
 
                                                                 <h4 class="col-lg-1"><?=$unique;?></h4>
                                                                 <h4 class="panel-title col-lg-11">
-                                                                    <a onclick="return ajax_song(<?php echo $song_row['melody_id'];?>,<?php echo $from_js;?>, <?php echo $to_js;?>,<?php echo $radio_zero;?>);" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $song_row['melody_id'];?>" aria-expanded="false" class="collapsed"><?=$song_row['song'];?> - <?php echo $song_row['artist_name'];?></a>
+
+                                                                    <a onclick="return ajax_song(<?php echo $song_row['melody_id'];?>,<?php echo $from_js;?>, <?php echo $to_js;?>,<?php echo $radio_zero;?>);" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $song_row['melody_id'];?>" aria-expanded="false" class="collapsed col-md-5" style="text-align: right"><?=$song_row['song'];?></a>
+                                                                    <span class="col-md-5" style="text-align: left"><?php echo $song_row['artist_name'];?></span>
                                                                     <span class="badge pull-right"><?=$song_row['total'];?></span>
 
                                                                 </h4>

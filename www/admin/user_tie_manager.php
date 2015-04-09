@@ -8,7 +8,9 @@ $user_tie = $db->selectpuresql($my_pure_sql);
 
 
 ?>
+
 <!--<link rel="stylesheet" href="../css/style.css">-->
+
 
 
 <script>
@@ -32,31 +34,47 @@ $user_tie = $db->selectpuresql($my_pure_sql);
     });
 </script>
 
-<div id="mainform<?php echo $user_id; ?>" style="background: #cccccc;">
+<div id="mainform<?php echo $user_id; ?>" style="background: #cccccc; padding-bottom: 15px;">
 
     <div id="form<?php echo $user_id; ?>">
         <table class="table table-hover tex" style="width: 50%; float: left; margin: 25px 25px; color:black;">
             <thead class="text-capitalize">
-            <th>Все исполнители</th>
-            <th>Выберите дату для исполнителя</th>
+            <th> Радио &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </th>
+            <th> Все исполнители &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+            <th> Выберите дату для исполнителя </th>
+
             </thead>
 
             <tbody class="table">
             <tr>
-                <td class="col-md-3">
-
-
-                    <select id="singer<?php echo $user_id; ?>" name="singer" class="form-control">
+                <td>
+                    <select id="radio<?php echo $user_id; ?>" name="radio" class="form-control">
                         <option value="">Выберите ...</option>
                         <?php
-                        $artist = $db->select("artist");
-                        foreach($artist as $art){
+                        $radios = $db->select("radio");?>
+
+                        <?php   foreach($radios as $radio){
                             ?>
-                            <option value="<?php echo $art['id']; ?>"><?php echo $art['name']; ?></option>
+                            <option value="<?php echo $radio['id']; ?>"><?php echo $radio['name']; ?></option>
                         <?php
                         }
                         ?>
                     </select>
+                </td>
+                <td class="col-md-3">
+
+                    <div class="ui-widget">
+                        <select class="combobox" id="singer<?php echo $user_id; ?>" name="singer" class="form-control">
+                            <option value=""></option>
+                            <?php
+                            $artist = $db->select("artist");
+                            foreach($artist as $art){?>
+                            <option value="<?php echo $art['id']; ?>"><?php echo $art['name']; ?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                    </div>
                 </td>
 
                 <td class="col-md-9">
@@ -75,12 +93,13 @@ $user_tie = $db->selectpuresql($my_pure_sql);
                     <input type="hidden" name="user" id="user" value="<?php  echo $user_id; ?>"/>
 
                 </td>
+
             </tr>
             </tbody>
         </table>
         <div style="clear: both"></div>
-        <div class="col-md-offset-5">
-            <input type="button" id="submit<?php echo $user_id; ?>" class="btn btn-primary" value="Сохранить" style="position: absolute; top: 120px; color:white;">
+        <div class="col-md-offset-5 no-padding">
+            <input type="button" id="submit<?php echo $user_id; ?>" class="btn btn-primary" value="Сохранить">
         </div>
     </div>
 </div>
@@ -89,7 +108,7 @@ $user_tie = $db->selectpuresql($my_pure_sql);
 
     <?php
     $result =   '<br><br><br><br>
-            <table class="table table-hover tex" style="width: 40%; float: right; margin: -216px 33px; margin-bottom: 5px; color: black;">
+            <table class="table table-hover tex" style="width: 40%; float: right; margin: -353px 33px; margin-bottom: 5px; color: black;">
             <thead class="text-capitalize">
             <th>Singer</th>
             <th>from date</th>
@@ -138,20 +157,21 @@ $user_tie = $db->selectpuresql($my_pure_sql);
         $("#submit<?php echo $user_id; ?>").click(function(){
             var user = <?php echo $user_id; ?>;
             var singer = $("#singer<?php echo $user_id; ?>").val();
+            var radio = $("#radio<?php echo $user_id; ?>").val();
             var from = $("#from<?php echo $user_id; ?>").val();
             var to = $("#to<?php echo $user_id; ?>").val();
             var lifetime_flag = 0;
             if($("#lifetime_flag<?php echo $user_id; ?>").is(':checked')) lifetime_flag = 1;
 
 // Returns successful data submission message when the entered information is stored in database.
-            var dataString = 'user='+ user + '&singer='+ singer + '&from='+ from + '&to='+ to + '&lifetime_flag='+ lifetime_flag;
+            var dataString = 'user='+ user + '&singer='+ singer + '&from='+ from + '&to='+ to + '&lifetime_flag='+ lifetime_flag+"&radio="+radio;
             if(singer==0)
             {
                 alert("Please Fill All Fields");
             }
             else
             {
-                alert(dataString);
+                //alert(dataString);
 // AJAX Code To Submit Form.
                 $.ajax({
                     type: "POST",
@@ -165,6 +185,7 @@ $user_tie = $db->selectpuresql($my_pure_sql);
                         }
                         refresh_joogazin();
                         $("#singer<?php echo $user_id; ?>").val(0);
+                        $("#radio<?php echo $user_id; ?>").val(0);
                         $("#from<?php echo $user_id; ?>").val("");
                         $("#to<?php echo $user_id; ?>").val("");
                         $("#lifetime_flag<?php echo $user_id; ?>").attr('checked', false);
@@ -175,11 +196,163 @@ $user_tie = $db->selectpuresql($my_pure_sql);
         });
     });
 
-    $(function() {
-        $( "#signer<?php echo $user_id;?>" ).combobox();
-        $( "#toggle" ).click(function() {
-            $( "#signer<?php echo $user_id;?>" ).toggle();
+</script>
+
+
+<link rel="stylesheet" href="js/jquery-ui.css">
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui.js"></script>
+<style>
+    .custom-combobox {
+        position: relative;
+        display: inline-block;
+    }
+    .custom-combobox-toggle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-left: -1px;
+        padding: 0;
+    }
+    .custom-combobox-input {
+        margin: 0;
+        padding: 5px 10px;
+    }
+</style>
+<script>
+    (function( $ ) {
+        $.widget( "custom.combobox", {
+            _create: function() {
+                this.wrapper = $( "<span>" )
+                    .addClass( "custom-combobox" )
+                    .insertAfter( this.element );
+
+                this.element.hide();
+                this._createAutocomplete();
+                this._createShowAllButton();
+            },
+
+            _createAutocomplete: function() {
+                var selected = this.element.children( ":selected" ),
+                    value = selected.val() ? selected.text() : "";
+
+                this.input = $( "<input>" )
+                    .appendTo( this.wrapper )
+                    .val( value )
+                    .attr( "title", "" )
+                    .addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left" )
+                    .autocomplete({
+                        delay: 0,
+                        minLength: 0,
+                        source: $.proxy( this, "_source" )
+                    })
+                    .tooltip({
+                        tooltipClass: "ui-state-highlight"
+                    });
+
+                this._on( this.input, {
+                    autocompleteselect: function( event, ui ) {
+                        ui.item.option.selected = true;
+                        this._trigger( "select", event, {
+                            item: ui.item.option
+                        });
+                    },
+
+                    autocompletechange: "_removeIfInvalid"
+                });
+            },
+
+            _createShowAllButton: function() {
+                var input = this.input,
+                    wasOpen = false;
+
+                $( "<a>" )
+                    .attr( "tabIndex", -1 )
+                    .attr( "title", "Show All Items" )
+                    .tooltip()
+                    .appendTo( this.wrapper )
+                    .button({
+                        icons: {
+                            primary: "ui-icon-triangle-1-s"
+                        },
+                        text: false
+                    })
+                    .removeClass( "ui-corner-all" )
+                    .addClass( "custom-combobox-toggle ui-corner-right" )
+                    .mousedown(function() {
+                        wasOpen = input.autocomplete( "widget" ).is( ":visible" );
+                    })
+                    .click(function() {
+                        input.focus();
+
+                        // Close if already visible
+                        if ( wasOpen ) {
+                            return;
+                        }
+
+                        // Pass empty string as value to search for, displaying all results
+                        input.autocomplete( "search", "" );
+                    });
+            },
+
+            _source: function( request, response ) {
+                var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+                response( this.element.children( "option" ).map(function() {
+                    var text = $( this ).text();
+                    if ( this.value && ( !request.term || matcher.test(text) ) )
+                        return {
+                            label: text,
+                            value: text,
+                            option: this
+                        };
+                }) );
+            },
+
+            _removeIfInvalid: function( event, ui ) {
+
+                // Selected an item, nothing to do
+                if ( ui.item ) {
+                    return;
+                }
+
+                // Search for a match (case-insensitive)
+                var value = this.input.val(),
+                    valueLowerCase = value.toLowerCase(),
+                    valid = false;
+                this.element.children( "option" ).each(function() {
+                    if ( $( this ).text().toLowerCase() === valueLowerCase ) {
+                        this.selected = valid = true;
+                        return false;
+                    }
+                });
+
+                // Found a match, nothing to do
+                if ( valid ) {
+                    return;
+                }
+
+                // Remove invalid value
+                this.input
+                    .val( "" )
+                    .attr( "title", value + " didn't match any item" )
+                    .tooltip( "open" );
+                this.element.val( "" );
+                this._delay(function() {
+                    this.input.tooltip( "close" ).attr( "title", "" );
+                }, 2500 );
+                this.input.autocomplete( "instance" ).term = "";
+            },
+
+            _destroy: function() {
+                this.wrapper.remove();
+                this.element.show();
+            }
         });
+    })( jQuery );
+
+    $(function() {
+        $( ".combobox" ).combobox();
+
     });
 </script>
 

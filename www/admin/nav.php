@@ -38,7 +38,11 @@
                         <li>
                             <a href="index.php">Главная</a>
                         </li>
-                        
+                        <?php
+                            if($_SESSION['user_type'] == 1){
+
+
+                        ?>
                         <li>
                             <a href="#">Пользователи <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -50,15 +54,17 @@
                                 </li>
                             </ul>
                         </li>
-
+                        <?php
+                            }
+                        ?>
                         <li>
                             <a href="#">Статистика (графика) <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="banners.php">Статистика по Песням(графика)</a>
+                                    <a href="statistics_by_songs.php">Статистика по Песням(графика)</a>
                                 </li> 
                                 <li>
-                                    <a href="add_banner.php">Статистика по Певцам(графика)</a>
+                                    <a href="add_banner.php">Статистика по Исполнитель(графика)</a>
                                 </li>                              
                             </ul>
                         </li>
